@@ -5,7 +5,7 @@ $input = explode("\r\n\r\n", $s1);
 
 $seeds = explode(' ', explode(': ', $input[0])[1]);
 for ($i=0; $i<count($seeds); $i+=2)
-  $seedRange[] = array($seed=$seeds[$i], $seeds[$i]+$seeds[$i+1]);
+  $seedRange[] = array($seeds[$i], $seeds[$i]+$seeds[$i+1]);
 
 $convert = array ();
 $n = -1;
