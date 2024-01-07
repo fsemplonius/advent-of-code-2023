@@ -21,10 +21,9 @@ function check($mirror) {
       }
       $j--; $k++;
     }
-    if ($found and $mod == 1) break;
     $i++;
+    if ($found and $mod == 1) return $i;
   }
-  if ($found and $mod == 1) return $i+1;
   return 0;
 }
 
