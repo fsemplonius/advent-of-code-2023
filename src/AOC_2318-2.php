@@ -1,11 +1,13 @@
 <?php
 
+//
+// Based on shoelace formula
+//
 include 'Puzzle_2318.php';
 $input = explode("\r\n", $s1);
 
 $dirs = array(0 => 'R', 1 => 'D', 2 => 'L', 3 => 'U');
 $tot = 2;
-$path = array ();
 $v = $h = 0;
 while ($s1=next($input)) {
   list ($dum, $hex) = explode('(#', $s1);
@@ -27,7 +29,6 @@ while ($s1=next($input)) {
   $c3 = $v;
   $c4 = $h;
   $tot += $steps + $c1 * $c4 - $c2 * $c3;
-  $first = false;
   $c1 = $c3;
   $c2 = $c4;
 }
